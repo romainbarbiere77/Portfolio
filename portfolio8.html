@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romain Barbière | Portfolio SIO v8 — Interface Futuriste</title>
+    <link rel="stylesheet" href="portfolio8.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Fond animé avec grille -->
+    <div class="background-grid"></div>
+    <div class="background-gradient"></div>
+
+    <!-- Séquence de chargement -->
+    <div id="loading-screen" class="loading-screen active">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <div class="logo-ring"></div>
+                <div class="logo-ring ring-2"></div>
+                <div class="logo-center">RB</div>
+            </div>
+            <h2 class="loading-title">SYSTÈME EN COURS D'INITIALISATION</h2>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+            <p class="loading-status">Chargement des modules...</p>
+            <div class="loading-percentage">0%</div>
+        </div>
+    </div>
+
+    <!-- Interface principale -->
+    <div id="main-app" class="main-app">
+        
+        <!-- Header flottant -->
+        <header class="floating-header">
+            <div class="header-content">
+                <div class="brand">
+                    <span class="brand-icon">◆</span>
+                    <span class="brand-text">ROMAIN BARBIÈRE</span>
+                </div>
+                <div class="header-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">DISPONIBLE POUR STAGE</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Section Hero -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-badge">BTS SIO — 1ÈRE ANNÉE — SISR</div>
+                <h1 class="hero-title">
+                    <span class="title-line">DÉVELOPPEUR</span>
+                    <span class="title-line gradient-text">INFRASTRUCTURE</span>
+                    <span class="title-line">& SYSTÈMES</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Spécialisé dans le développement de solutions logicielles et la gestion d'infrastructures réseau sécurisées.
+                </p>
+                <div class="hero-actions">
+                    <a href="mailto:romain.barbiere77@gmail.com" class="cta-button primary">
+                        <span class="button-text">Démarrer un projet</span>
+                        <span class="button-icon">→</span>
+                    </a>
+                    <button class="cta-button secondary" id="projects-trigger">
+                        <span class="button-text">Voir projets [U5]</span>
+                        <span class="button-icon">◆</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cartes d'information en grille -->
+        <section class="info-grid">
+            
+            <!-- Carte Compétences -->
+            <div class="glass-card skills-card">
+                <div class="card-header">
+                    <span class="card-number">01</span>
+                    <h3 class="card-title">STACK TECHNIQUE</h3>
+                </div>
+                <div class="card-body">
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">LINUX</span>
+                                <span class="skill-value">98%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 / CSS3</span>
+                                <span class="skill-value">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JAVASCRIPT</span>
+                                <span class="skill-value">92%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">RÉSEAUX</span>
+                                <span class="skill-value">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" style="--skill-width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Parcours -->
+            <div class="glass-card timeline-card">
+                <div class="card-header">
+                    <span class="card-number">02</span>
+                    <h3 class="card-title">PARCOURS</h3>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-year">2025 - 2026</span>
+                                <p class="timeline-text">BTS1 SIO option SISR</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-year">2025</span>
+                                <p class="timeline-text">Baccalauréat obtenu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Contact -->
+            <div class="glass-card contact-card">
+                <div class="card-header">
+                    <span class="card-number">03</span>
+                    <h3 class="card-title">CONTACT</h3>
+                </div>
+                <div class="card-body">
+                    <p class="contact-text">Prêt à collaborer sur votre prochain projet ?</p>
+                    <a href="mailto:romain.barbiere77@gmail.com" class="contact-email">
+                        romain.barbiere77@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carte U5 Trigger -->
+            <div class="glass-card u5-card" id="u5-card-trigger">
+                <div class="u5-content">
+                    <div class="u5-icon">◆</div>
+                    <h3 class="u5-title">U5</h3>
+                    <p class="u5-subtitle">PROJETS CLASSIFIÉS</p>
+                    <div class="u5-animation">
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-ring ring-2"></div>
+                        <div class="pulse-ring ring-3"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Overlay Projets U5 -->
+    <div id="projects-overlay" class="projects-overlay">
+        <div class="overlay-background"></div>
+        <div class="projects-container">
+            
+            <!-- Header de l'overlay -->
+            <div class="projects-header">
+                <div class="projects-header-content">
+                    <h2 class="projects-title">
+                        <span class="projects-icon">◆</span>
+                        BASE DE DONNÉES U5
+                    </h2>
+                    <p class="projects-subtitle">Archives sécurisées — Niveau d'accès : ADMIN</p>
+                </div>
+                <button class="close-button" id="close-projects">
+                    <span class="close-line"></span>
+                    <span class="close-line"></span>
+                </button>
+            </div>
+
+            <!-- Liste des projets -->
+            <div class="projects-list">
+                
+                <div class="project-item">
+                    <button class="project-toggle">
+                        <div class="project-header-info">
+                            <span class="project-number">01</span>
+                            <h3 class="project-name">LOAD BALANCER AVEC HAPROXY</h3>
+                        </div>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="project-details">
+                        <p class="project-description">
+                            Mise en place d'un système de répartition de charge avec HAProxy pour distribuer automatiquement le trafic web entre plusieurs serveurs Apache. Configuration de la haute disponibilité et gestion de la bascule automatique en cas de panne d'un serveur.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HAProxy</span>
+                            <span class="tag">Apache</span>
+                            <span class="tag">Load Balancing</span>
+                            <span class="tag">Linux</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://drive.google.com/file/d/1orJqhTzWo4JJt-atZo68q7DtiWmaQ8fi/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
+                                <span class="button-text">Consulter le rapport</span>
+                                <span class="button-icon">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <button class="project-toggle">
+                        <div class="project-header-info">
+                            <span class="project-number">02</span>
+                            <h3 class="project-name">SERVEUR DNS & WEB</h3>
+                        </div>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="project-details">
+                        <p class="project-description">
+                            Configuration d'un serveur DNS pour la résolution de noms de domaine et mise en place d'un serveur web Apache. Gestion des zones DNS, enregistrements A, CNAME et configuration des hôtes virtuels pour héberger plusieurs sites sur une même machine.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">DNS</span>
+                            <span class="tag">Apache</span>
+                            <span class="tag">Bind9</span>
+                            <span class="tag">Virtual Hosts</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://drive.google.com/file/d/1g-LJXD5bluByPVxsv0EKLNxTXw20EdfM/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
+                                <span class="button-text">Consulter le rapport</span>
+                                <span class="button-icon">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <button class="project-toggle">
+                        <div class="project-header-info">
+                            <span class="project-number">03</span>
+                            <h3 class="project-name">GESTION AVANCÉE UTILISATEURS LINUX</h3>
+                        </div>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="project-details">
+                        <p class="project-description">
+                            Administration système Linux approfondie : gestion des utilisateurs et groupes, configuration des permissions avancées (SetUID, SetGID, Sticky Bit), sécurisation des fichiers critiques (/etc/passwd, /etc/shadow, /etc/group) et audit des commandes sudo avec journalisation complète des actions administratives.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Linux Admin</span>
+                            <span class="tag">Permissions</span>
+                            <span class="tag">Sudo</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://drive.google.com/file/d/16iajoQaNlVseb4Ib5dBC0HL9Tjr4eSQa/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
+                                <span class="button-text">Consulter le rapport</span>
+                                <span class="button-icon">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <button class="project-toggle">
+                        <div class="project-header-info">
+                            <span class="project-number">04</span>
+                            <h3 class="project-name">INFRASTRUCTURE LINUX ENTREPRISE</h3>
+                        </div>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="project-details">
+                        <p class="project-description">
+                            Déploiement et configuration d'une infrastructure réseau complète en environnement entreprise : serveurs Linux, gestion de parc informatique, automatisation des tâches d'administration et mise en place de politiques de sécurité. Intégration de scripts Bash pour l'automatisation quotidienne.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Linux Server</span>
+                            <span class="tag">Bash Scripting</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Infrastructure</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://drive.google.com/file/d/1b6HA--aYYhMlNDoBfLRvXhCRyt4dofwh/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
+                                <span class="button-text">Consulter le rapport</span>
+                                <span class="button-icon">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <button class="project-toggle">
+                        <div class="project-header-info">
+                            <span class="project-number">05</span>
+                            <h3 class="project-name">Serveur GLPI</h3>
+                        </div>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="project-details">
+                        <p class="project-description">
+                             Déploiement d'une solution de gestion de parc informatique pour automatiser l'inventaire matériel et logiciel de l'entreprise, tout en centralisant le support technique via une plateforme de Helpdesk structurée.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">ITSM Solution</span>
+                            <span class="tag">Asset Management</span>
+                            <span class="tag">Helpdesk Ticketing</span>
+                            <span class="tag">Inventory Automation</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://docs.google.com/document/d/1jUZxO36raOoGqUDvRdQHIABXzx9jBAA2/edit?usp=drive_link&ouid=113695881678060958123&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
+                                <span class="button-text">Consulter le rapport</span>
+                                <span class="button-icon">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <button class="project-toggle">
+                        <div class="project-header-info">
+                            <span class="project-number">06</span>
+                            <h3 class="project-name">Active Directory</h3>
+                        </div>
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="project-details">
+                        <p class="project-description">
+Mise en place d'un service d'annuaire centralisé pour orchestrer la sécurité du réseau, permettant d'automatiser le contrôle des accès utilisateurs et d'uniformiser la configuration du parc informatique via des stratégies de groupe (GPO).                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Windows Server</span>
+                            <span class="tag">Active Directory</span>
+                            <span class="tag">GPO Automation</span>
+                            <span class="tag">Network Identity</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://drive.google.com/file/d/1elvZpKq5xmvcdeelqnD0ypMBVhBlw6pe/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
+                                <span class="button-text">Consulter le rapport</span>
+                                <span class="button-icon">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="portfolio8.js"></script>
+</body>
+</html>
