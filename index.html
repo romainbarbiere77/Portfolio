@@ -1,376 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romain Barbière | Portfolio SIO v8 — Interface Futuriste</title>
-    <link rel="stylesheet" href="portfolio8.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio de Romain Barbière — BTS SIO SISR, architecture réseau, systèmes et cybersécurité.">
+<title>Romain Barbière — Network / Systems / Cyber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Exo+2:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio8.css">
 </head>
 <body>
+<div class="noise"></div>
+<div class="background-grid"></div>
+<div class="aurora aurora-a"></div><div class="aurora aurora-b"></div><div class="aurora aurora-c"></div>
+<div class="scroll-progress" id="scroll-progress"></div>
 
-    <!-- Fond animé avec grille -->
-    <div class="background-grid"></div>
-    <div class="background-gradient"></div>
-
-    <!-- Séquence de chargement -->
-    <div id="loading-screen" class="loading-screen active">
-        <div class="loading-container">
-            <div class="loading-logo">
-                <div class="logo-ring"></div>
-                <div class="logo-ring ring-2"></div>
-                <div class="logo-center">RB</div>
-            </div>
-            <h2 class="loading-title">SYSTÈME EN COURS D'INITIALISATION</h2>
-            <div class="loading-bar-container">
-                <div class="loading-bar"></div>
-            </div>
-            <p class="loading-status">Chargement des modules...</p>
-            <div class="loading-percentage">0%</div>
+<div id="loading-screen" class="loading-screen active">
+  <div class="boot-noise"></div>
+  <div class="boot-scanlines"></div>
+  <div class="boot-vignette"></div>
+  <div class="boot-grid"></div>
+  <div class="boot-network" aria-hidden="true">
+    <span class="node n1"></span><span class="node n2"></span><span class="node n3"></span><span class="node n4"></span><span class="node n5"></span>
+    <i class="link l1"></i><i class="link l2"></i><i class="link l3"></i><i class="link l4"></i>
+  </div>
+  <div class="boot-shell cinematic-boot">
+    <div class="boot-top"><span>RB // PORTFOLIO OS <b>v10.0</b></span><span>SECURE SESSION · <em>ENCRYPTED</em></span></div>
+    <div class="boot-command"><span class="prompt">SYSTEM://</span><span id="boot-command-text">INITIALIZE PERSONAL NODE</span><span class="cursor-block"></span></div>
+    <div class="boot-core cinematic-core radar-searching">
+      <div class="dragon-radar scouter-mode">
+        <div class="scouter-arrows" aria-hidden="true">
+          <i class="arrow ar1">➤</i><i class="arrow ar2">➤</i><i class="arrow ar3">➤</i><i class="arrow ar4">➤</i>
         </div>
-    </div>
-
-    <!-- Interface principale -->
-    <div id="main-app" class="main-app">
-        
-        <!-- Header flottant -->
-        <header class="floating-header">
-            <div class="header-content">
-                <div class="brand">
-                    <span class="brand-icon">◆</span>
-                    <span class="brand-text">ROMAIN BARBIÈRE</span>
-                </div>
-                <div class="header-status">
-                    <span class="status-dot"></span>
-                    <span class="status-text">DISPONIBLE POUR STAGE</span>
-                </div>
-            </div>
-        </header>
-
-        <!-- Section Hero -->
-        <section class="hero-section">
-            <div class="hero-container">
-                <div class="hero-badge">BTS SIO — 1ÈRE ANNÉE — SISR</div>
-                <h1 class="hero-title">
-                    <span class="title-line">DÉVELOPPEUR</span>
-                    <span class="title-line gradient-text">INFRASTRUCTURE</span>
-                    <span class="title-line">& SYSTÈMES</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Spécialisé dans le développement de solutions logicielles et la gestion d'infrastructures réseau sécurisées.
-                </p>
-                <div class="hero-actions">
-                    <a href="mailto:romain.barbiere77@gmail.com" class="cta-button primary">
-                        <span class="button-text">Démarrer un projet</span>
-                        <span class="button-icon">→</span>
-                    </a>
-                    <button class="cta-button secondary" id="projects-trigger">
-                        <span class="button-text">Voir projets [U5]</span>
-                        <span class="button-icon">◆</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cartes d'information en grille -->
-        <section class="info-grid">
-            
-            <!-- Carte Compétences -->
-            <div class="glass-card skills-card">
-                <div class="card-header">
-                    <span class="card-number">01</span>
-                    <h3 class="card-title">STACK TECHNIQUE</h3>
-                </div>
-                <div class="card-body">
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">LINUX</span>
-                                <span class="skill-value">98%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-fill" style="--skill-width: 98%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">HTML5 / CSS3</span>
-                                <span class="skill-value">95%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-fill" style="--skill-width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">JAVASCRIPT</span>
-                                <span class="skill-value">92%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-fill" style="--skill-width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">RÉSEAUX</span>
-                                <span class="skill-value">90%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-fill" style="--skill-width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte Parcours -->
-            <div class="glass-card timeline-card">
-                <div class="card-header">
-                    <span class="card-number">02</span>
-                    <h3 class="card-title">PARCOURS</h3>
-                </div>
-                <div class="card-body">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-year">2025 - 2026</span>
-                                <p class="timeline-text">BTS1 SIO option SISR</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-year">2025</span>
-                                <p class="timeline-text">Baccalauréat obtenu</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte Contact -->
-            <div class="glass-card contact-card">
-                <div class="card-header">
-                    <span class="card-number">03</span>
-                    <h3 class="card-title">CONTACT</h3>
-                </div>
-                <div class="card-body">
-                    <p class="contact-text">Prêt à collaborer sur votre prochain projet ?</p>
-                    <a href="mailto:romain.barbiere77@gmail.com" class="contact-email">
-                        romain.barbiere77@gmail.com
-                    </a>
-                </div>
-            </div>
-
-            <!-- Carte U5 Trigger -->
-            <div class="glass-card u5-card" id="u5-card-trigger">
-                <div class="u5-content">
-                    <div class="u5-icon">◆</div>
-                    <h3 class="u5-title">U5</h3>
-                    <p class="u5-subtitle">PROJETS CLASSIFIÉS</p>
-                    <div class="u5-animation">
-                        <div class="pulse-ring"></div>
-                        <div class="pulse-ring ring-2"></div>
-                        <div class="pulse-ring ring-3"></div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-    </div>
-
-    <!-- Overlay Projets U5 -->
-    <div id="projects-overlay" class="projects-overlay">
-        <div class="overlay-background"></div>
-        <div class="projects-container">
-            
-            <!-- Header de l'overlay -->
-            <div class="projects-header">
-                <div class="projects-header-content">
-                    <h2 class="projects-title">
-                        <span class="projects-icon">◆</span>
-                        BASE DE DONNÉES U5
-                    </h2>
-                    <p class="projects-subtitle">Archives sécurisées — Niveau d'accès : ADMIN</p>
-                </div>
-                <button class="close-button" id="close-projects">
-                    <span class="close-line"></span>
-                    <span class="close-line"></span>
-                </button>
-            </div>
-
-            <!-- Liste des projets -->
-            <div class="projects-list">
-                
-                <div class="project-item">
-                    <button class="project-toggle">
-                        <div class="project-header-info">
-                            <span class="project-number">01</span>
-                            <h3 class="project-name">LOAD BALANCER AVEC HAPROXY</h3>
-                        </div>
-                        <span class="toggle-icon">+</span>
-                    </button>
-                    <div class="project-details">
-                        <p class="project-description">
-                            Mise en place d'un système de répartition de charge avec HAProxy pour distribuer automatiquement le trafic web entre plusieurs serveurs Apache. Configuration de la haute disponibilité et gestion de la bascule automatique en cas de panne d'un serveur.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">HAProxy</span>
-                            <span class="tag">Apache</span>
-                            <span class="tag">Load Balancing</span>
-                            <span class="tag">Linux</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://drive.google.com/file/d/1orJqhTzWo4JJt-atZo68q7DtiWmaQ8fi/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
-                                <span class="button-text">Consulter le rapport</span>
-                                <span class="button-icon">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <button class="project-toggle">
-                        <div class="project-header-info">
-                            <span class="project-number">02</span>
-                            <h3 class="project-name">SERVEUR DNS & WEB</h3>
-                        </div>
-                        <span class="toggle-icon">+</span>
-                    </button>
-                    <div class="project-details">
-                        <p class="project-description">
-                            Configuration d'un serveur DNS pour la résolution de noms de domaine et mise en place d'un serveur web Apache. Gestion des zones DNS, enregistrements A, CNAME et configuration des hôtes virtuels pour héberger plusieurs sites sur une même machine.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">DNS</span>
-                            <span class="tag">Apache</span>
-                            <span class="tag">Bind9</span>
-                            <span class="tag">Virtual Hosts</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://drive.google.com/file/d/1g-LJXD5bluByPVxsv0EKLNxTXw20EdfM/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
-                                <span class="button-text">Consulter le rapport</span>
-                                <span class="button-icon">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <button class="project-toggle">
-                        <div class="project-header-info">
-                            <span class="project-number">03</span>
-                            <h3 class="project-name">GESTION AVANCÉE UTILISATEURS LINUX</h3>
-                        </div>
-                        <span class="toggle-icon">+</span>
-                    </button>
-                    <div class="project-details">
-                        <p class="project-description">
-                            Administration système Linux approfondie : gestion des utilisateurs et groupes, configuration des permissions avancées (SetUID, SetGID, Sticky Bit), sécurisation des fichiers critiques (/etc/passwd, /etc/shadow, /etc/group) et audit des commandes sudo avec journalisation complète des actions administratives.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Linux Admin</span>
-                            <span class="tag">Permissions</span>
-                            <span class="tag">Sudo</span>
-                            <span class="tag">Security</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://drive.google.com/file/d/16iajoQaNlVseb4Ib5dBC0HL9Tjr4eSQa/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
-                                <span class="button-text">Consulter le rapport</span>
-                                <span class="button-icon">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <button class="project-toggle">
-                        <div class="project-header-info">
-                            <span class="project-number">04</span>
-                            <h3 class="project-name">INFRASTRUCTURE LINUX ENTREPRISE</h3>
-                        </div>
-                        <span class="toggle-icon">+</span>
-                    </button>
-                    <div class="project-details">
-                        <p class="project-description">
-                            Déploiement et configuration d'une infrastructure réseau complète en environnement entreprise : serveurs Linux, gestion de parc informatique, automatisation des tâches d'administration et mise en place de politiques de sécurité. Intégration de scripts Bash pour l'automatisation quotidienne.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Linux Server</span>
-                            <span class="tag">Bash Scripting</span>
-                            <span class="tag">Automation</span>
-                            <span class="tag">Infrastructure</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://drive.google.com/file/d/1b6HA--aYYhMlNDoBfLRvXhCRyt4dofwh/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
-                                <span class="button-text">Consulter le rapport</span>
-                                <span class="button-icon">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <button class="project-toggle">
-                        <div class="project-header-info">
-                            <span class="project-number">05</span>
-                            <h3 class="project-name">Serveur GLPI</h3>
-                        </div>
-                        <span class="toggle-icon">+</span>
-                    </button>
-                    <div class="project-details">
-                        <p class="project-description">
-                             Déploiement d'une solution de gestion de parc informatique pour automatiser l'inventaire matériel et logiciel de l'entreprise, tout en centralisant le support technique via une plateforme de Helpdesk structurée.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">ITSM Solution</span>
-                            <span class="tag">Asset Management</span>
-                            <span class="tag">Helpdesk Ticketing</span>
-                            <span class="tag">Inventory Automation</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://docs.google.com/document/d/1jUZxO36raOoGqUDvRdQHIABXzx9jBAA2/edit?usp=drive_link&ouid=113695881678060958123&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
-                                <span class="button-text">Consulter le rapport</span>
-                                <span class="button-icon">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <button class="project-toggle">
-                        <div class="project-header-info">
-                            <span class="project-number">06</span>
-                            <h3 class="project-name">Active Directory</h3>
-                        </div>
-                        <span class="toggle-icon">+</span>
-                    </button>
-                    <div class="project-details">
-                        <p class="project-description">
-Mise en place d'un service d'annuaire centralisé pour orchestrer la sécurité du réseau, permettant d'automatiser le contrôle des accès utilisateurs et d'uniformiser la configuration du parc informatique via des stratégies de groupe (GPO).                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Windows Server</span>
-                            <span class="tag">Active Directory</span>
-                            <span class="tag">GPO Automation</span>
-                            <span class="tag">Network Identity</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://drive.google.com/file/d/1elvZpKq5xmvcdeelqnD0ypMBVhBlw6pe/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cta-button primary project-btn">
-                                <span class="button-text">Consulter le rapport</span>
-                                <span class="button-icon">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="radar-inner-ring"></div>
+        <div class="scanner-point"><span class="scanner-dot"></span><span class="scanner-pulse"></span></div>
+        <div class="scanner-target-ring"></div>
+        <div class="scanner-analysis"></div>
+        <div class="scanner-status">
+          <strong id="scouter-caption">RECHERCHE...</strong>
+          <span id="scouter-sub">CIBLE NON IDENTIFIÉE</span>
         </div>
+        <div class="radar-hud hud-top">SCOUT // RECHERCHE DE SIGNAL</div>
+        <div class="radar-hud hud-bottom">ÉTAT : <b id="radar-state">RECHERCHE</b></div>
+      </div>
+      <div class="boot-ring ring-a"></div><div class="boot-ring ring-b"></div><div class="boot-ring ring-c"></div>
+      <div class="boot-orbit orbit-a"></div><div class="boot-orbit orbit-b"></div><div class="boot-mark">RB</div>
+      <span class="core-crosshair h"></span><span class="core-crosshair v"></span>
+      <div class="found-message" id="found-message">
+        <span class="found-kicker">SIGNAL IDENTIFIÉ</span>
+        <strong>PORTFOLIO TROUVÉ</strong>
+        <small id="connect-message">CONNEXION...</small>
+      </div>
     </div>
+    <div class="boot-terminal">
+      <div class="terminal-line"><span>[01]</span><strong>VERIFYING IDENTITY</strong><b data-state="ok">OK</b></div>
+      <div class="terminal-line"><span>[02]</span><strong>LOADING NETWORK PROFILE</strong><b data-state="wait">WAIT</b></div>
+      <div class="terminal-line"><span>[03]</span><strong>MOUNTING PROJECT ARCHIVE</strong><b data-state="wait">WAIT</b></div>
+      <div class="terminal-line"><span>[04]</span><strong>SYNCING TECHNOLOGY RADAR</strong><b data-state="wait">WAIT</b></div>
+    </div>
+    <div class="boot-copy"><span>&gt; Connexion au profil personnel...</span><span>&gt; Analyse du parcours professionnel...</span><span>&gt; Déverrouillage de l’interface...</span></div>
+    <div class="loading-bar-container"><div class="loading-bar"><i class="bar-glow"></i></div></div>
+    <div class="boot-status-row"><span class="loading-status">AUTHENTICATION</span><strong class="loading-percentage">0%</strong></div>
+    <div class="boot-footer"><span>NETWORK / SYSTEMS / CYBER</span><span>PARIS // FR</span></div>
+  </div>
+  <div class="boot-reveal reveal-top"></div><div class="boot-reveal reveal-bottom"></div>
+</div>
 
-    <script src="portfolio8.js"></script>
+<div id="main-app" class="main-app">
+<header class="floating-header">
+  <div class="header-content">
+    <a href="#top" class="brand"><span class="brand-mark">RB</span><span>ROMAIN BARBIÈRE</span></a>
+    <nav class="quick-nav">
+      <a href="#profil">PROFIL</a><a href="#experience">PARCOURS</a><a href="#veille">VEILLE</a><a href="#projets">PROJETS</a><a href="#contact">CONTACT</a>
+    </nav>
+    <button class="status-pill" id="terminal-trigger"><span class="status-dot"></span><span>SYS ONLINE</span><b>⌘</b></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero-section">
+  <div class="hero-copy">
+    <div class="hero-badge"><span class="live-dot"></span> BTS SIO · SISR · ARCHITECTURE RÉSEAU</div>
+    <p class="hero-kicker">NETWORK / SYSTEMS / SECURITY</p>
+    <h1><span>ROMAIN</span><em>BARBIÈRE</em></h1>
+    <p class="hero-subtitle">Étudiant en BTS SIO SISR et alternant chez <strong>Fnac Darty</strong> au sein de l’équipe Architecture Réseau.</p>
+    <div class="hero-actions"><a href="#experience" class="cta-button primary">Explorer mon parcours <span>↘</span></a><button id="hero-terminal" class="cta-button secondary">Terminal <span>⌘</span></button></div>
+    <div class="hero-stat-row">
+      <div><strong>2022</strong><span>PREMIER STAGE</span></div><div><strong>2023</strong><span>CYBERSÉCURITÉ</span></div><div><strong>2025</strong><span>BAC + FNAC DARTY</span></div><div><strong>09.25</strong><span>ALTERNANCE ACTIVE</span></div>
+    </div>
+  </div>
+  <div class="hero-scene" aria-hidden="true">
+    <div class="scene-frame"><div class="scene-grid"></div><div class="scene-orb"><span></span></div><div class="scene-scan"></div>
+      <div class="scene-label label-a">ARCH</div><div class="scene-label label-b">NET</div><div class="scene-label label-c">SEC</div>
+      <div class="scene-center"><small>NODE</small><strong>RB</strong><span>PARIS // FR</span></div>
+    </div>
+    <div class="floating-chip chip-1">LINUX</div><div class="floating-chip chip-2">DNS</div><div class="floating-chip chip-3">ACTIVE DIRECTORY</div>
+  </div>
+</section>
+
+<section class="section profile-section" id="profil">
+  <div class="section-heading"><div><span class="section-eyebrow">01 / PROFIL TECHNIQUE</span><h2>MON <span class="gradient-text">LAB</span></h2></div><p>Un profil construit autour des infrastructures et de la compréhension des systèmes réseau.</p></div>
+  <div class="profile-layout">
+    <article class="glass-card profile-main">
+      <div class="card-top"><span class="card-code">CORE_PROFILE</span><span class="card-state">ACTIVE</span></div>
+      <div class="profile-head"><div class="avatar-core">RB</div><div><span class="micro-label">ORIENTATION</span><h3>Réseaux · Systèmes · Cybersécurité</h3><p>BTS SIO SISR / alternance Architecture Réseau</p></div></div>
+      <p class="profile-text">Je développe progressivement mes compétences en administration système, services réseau, virtualisation, sécurité et architecture d’infrastructure. Mon alternance me permet de relier ces connaissances à un environnement professionnel réel.</p>
+      <div class="skill-cloud"><span>Linux</span><span>Bind9</span><span>Apache</span><span>HAProxy</span><span>Windows Server</span><span>Active Directory</span><span>Bash</span><span>GLPI</span></div>
+    </article>
+    <article class="glass-card metrics-card">
+      <div class="card-top"><span class="card-code">TELEMETRY</span><span class="signal">● LIVE</span></div>
+      <div class="telemetry"><div><strong>05</strong><span>JALONS CLÉS</span></div><div><strong>06</strong><span>PROJETS SIO</span></div><div><strong>03</strong><span>AXES DE VEILLE</span></div><div><strong>01</strong><span>ALTERNANCE ACTIVE</span></div></div>
+    </article>
+    <article class="glass-card focus-card"><div class="focus-title"><span class="card-code">NETWORK RADAR</span><span>FOCUS</span></div><div class="radar"><i class="r1"></i><i class="r2"></i><i class="r3"></i><i class="sweep"></i><b class="blip one"></b><b class="blip two"></b><b class="blip three"></b><div class="radar-core">RB</div></div><p><strong>Architecture réseau</strong><span>Zone d’intérêt actuelle</span></p></article>
+  </div>
+</section>
+
+<section class="section experience-section" id="experience">
+  <div class="section-heading"><div><span class="section-eyebrow">02 / PARCOURS</span><h2>MON <span class="gradient-text">ÉVOLUTION</span></h2></div><p>Une chronologie unique, du premier jalon en haut jusqu’à ma situation actuelle en bas.</p></div>
+  <div class="timeline-wrap">
+    <div class="timeline-track" aria-hidden="true"><div class="timeline-track-line"></div><div class="timeline-track-glow"></div></div>
+    <article class="timeline-item education-item"><div class="timeline-index">01</div><div class="timeline-date"><strong>05.2022</strong><span>PREMIER JALON</span></div><div class="timeline-card glass-card"><div class="timeline-icon architecture">AR</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">MAI 2022 · IMMERSION</span><h3>Stage en architecture</h3></div><span class="timeline-kind">STAGE</span></div><p>Première découverte du monde professionnel et de l’architecture, point de départ de mon intérêt pour les environnements techniques.</p><div class="tags"><span>Architecture</span><span>Stage</span></div></div></div></article>
+    <article class="timeline-item education-item"><div class="timeline-index">02</div><div class="timeline-date"><strong>01.2023</strong><span>SPÉCIALISATION</span></div><div class="timeline-card glass-card"><div class="timeline-icon cyber">CY</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">JANVIER 2023 · DÉCOUVERTE</span><h3>Stage en cybersécurité</h3></div><span class="timeline-kind">STAGE</span></div><p>Découverte du domaine de la cybersécurité et première approche des enjeux de protection des systèmes et des données.</p><div class="tags"><span>Cybersécurité</span><span>Stage</span></div></div></div></article>
+    <article class="timeline-item education-item"><div class="timeline-index">03</div><div class="timeline-date"><strong>2025</strong><span>DIPLÔME</span></div><div class="timeline-card glass-card"><div class="timeline-icon bac">BA</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">2025 · LYCÉE HONORÉ DE BALZAC</span><h3>Baccalauréat général</h3></div><span class="timeline-kind">FORMATION</span></div><p>Baccalauréat général obtenu au lycée Honoré de Balzac, avant l’entrée en BTS SIO.</p><div class="tags"><span>Baccalauréat général</span><span>Honoré de Balzac</span></div></div></div></article>
+    <article class="timeline-item education-item"><div class="timeline-index">04</div><div class="timeline-date"><strong>07.2025</strong><span>ENTREPRISE</span></div><div class="timeline-card glass-card"><div class="timeline-icon fnac">F·D</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">JUILLET 2025 · FNAC DARTY</span><h3>Première expérience chez Fnac Darty</h3></div><span class="timeline-kind">EXPÉRIENCE</span></div><p>Première immersion professionnelle au sein du groupe, avant le début de mon alternance en septembre 2025.</p><div class="tags"><span>Fnac Darty</span><span>Entreprise</span><span>Juillet 2025</span></div></div></div></article>
+    <article class="timeline-item current"><div class="timeline-index">05</div><div class="timeline-date"><strong>09.2025</strong><span>AUJOURD’HUI</span></div><div class="timeline-card glass-card current-card"><div class="timeline-icon fnac">F·D</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">SEPTEMBRE 2025 → AUJOURD’HUI</span><h3>Alternance chez Fnac Darty</h3></div><span class="current-badge">EN COURS</span></div><p>Alternance au sein de l’équipe <strong>Architecture Réseau</strong>, en parallèle de mon BTS SIO SISR. Une expérience qui me confronte directement aux problématiques d’infrastructure et d’architecture réseau en entreprise.</p><div class="tags"><span>Architecture réseau</span><span>Infrastructure</span><span>Alternance</span><span>SISR</span></div></div></div></article>
+  </div>
+  <div class="education-strip glass-card"><div><span class="micro-label">FORMATION EN COURS</span><h3>BTS SIO — SISR</h3><p>Depuis septembre 2025 · systèmes, réseaux et cybersécurité</p></div><div class="education-tags"><span>Linux</span><span>Réseaux</span><span>Cyber</span><span>SISR</span></div></div>
+</section>
+
+<section class="section watch-section" id="veille">
+  <div class="section-heading"><div><span class="section-eyebrow">03 / VEILLE TECHNOLOGIQUE</span><h2>TECH <span class="gradient-text">RADAR</span></h2></div><p>Ma veille se concentre sur les évolutions qui croisent réseau, sécurité et architecture d’infrastructure.</p></div>
+  <div class="watch-dashboard glass-card">
+    <div class="watch-top"><div><span class="live-dot"></span><strong>VEILLE ACTIVE</strong></div><span>3 SUJETS · 2026</span></div>
+    <div class="watch-grid">
+      <article class="watch-card hot"><div class="watch-number">01</div><div class="watch-icon">ZT</div><span class="watch-status">HOT TOPIC</span><h3>SASE / Zero Trust</h3><p>Évolution des architectures réseau vers des modèles où connectivité et contrôle d’accès sont pensés ensemble autour du principe Zero Trust.</p><div class="watch-footer"><span>ARCHITECTURE</span><a href="https://developers.cloudflare.com/reference-architecture/architectures/sase/" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></div></article>
+      <article class="watch-card"><div class="watch-number">02</div><div class="watch-icon">AI</div><span class="watch-status">NETWORK</span><h3>Réseaux à l’ère de l’IA</h3><p>Automatisation, observabilité et nouvelles contraintes d’infrastructure liées aux charges de travail et usages de l’IA.</p><div class="watch-footer"><span>AI / NETWORK</span><a href="https://gblogs.cisco.com/fr/reseaux/" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></div></article>
+      <article class="watch-card"><div class="watch-number">03</div><div class="watch-icon">PQ</div><span class="watch-status">SECURITY</span><h3>Cryptographie post-quantique</h3><p>Transition progressive vers des mécanismes cryptographiques pensés pour rester robustes face aux futurs scénarios de calcul quantique.</p><div class="watch-footer"><span>CRYPTO / CYBER</span><a href="https://www.nist.gov/pqc" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></div></article>
+    </div>
+    <div class="watch-console"><span>WATCHDOG</span><div class="watch-meter"><i></i></div><span>3/3 MONITORED</span></div>
+  </div>
+</section>
+
+<section class="section projects-section" id="projets">
+  <div class="section-heading"><div><span class="section-eyebrow">04 / RÉALISATIONS</span><h2>PROJECT <span class="gradient-text">GRID</span></h2></div><button class="ghost-button" id="projects-trigger">CENTRE DE COMMANDE ↗</button></div>
+  <div class="project-grid">
+    <button class="project-card featured" data-project="0"><span class="project-index">01</span><span class="project-type">NETWORK</span><h3>HAProxy Load Balancer</h3><p>Répartition de charge et haute disponibilité.</p><span class="project-open">OUVRIR LE DOSSIER ↗</span></button>
+    <button class="project-card" data-project="1"><span class="project-index">02</span><span class="project-type">SERVICES</span><h3>DNS & Serveur Web</h3><p>Bind9, résolution de noms et Apache.</p><span class="project-open">EXAMINER ↗</span></button>
+    <button class="project-card" data-project="2"><span class="project-index">03</span><span class="project-type">LINUX</span><h3>Administration Linux</h3><p>Utilisateurs, permissions et sudo.</p><span class="project-open">EXAMINER ↗</span></button>
+    <button class="project-card" data-project="3"><span class="project-index">04</span><span class="project-type">INFRA</span><h3>Infrastructure Linux</h3><p>Serveurs, Bash et automatisation.</p><span class="project-open">EXAMINER ↗</span></button>
+    <button class="project-card" data-project="4"><span class="project-index">05</span><span class="project-type">ITSM</span><h3>Serveur GLPI</h3><p>Parc informatique et Helpdesk.</p><span class="project-open">EXAMINER ↗</span></button>
+    <button class="project-card" data-project="5"><span class="project-index">06</span><span class="project-type">IDENTITY</span><h3>Active Directory</h3><p>Annuaire centralisé et stratégies GPO.</p><span class="project-open">EXAMINER ↗</span></button>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact">
+  <div class="contact-layout glass-card"><div><span class="section-eyebrow">05 / CONTACT</span><h2>OUVRIR UN <span class="gradient-text">CANAL</span></h2><p>Pour un échange professionnel, un projet, une question sur mon parcours ou simplement pour découvrir mon travail.</p></div><a href="mailto:romain.barbiere77@gmail.com" class="contact-mail"><small>EMAIL</small><strong>romain.barbiere77@gmail.com</strong><span>↗</span></a></div>
+</section>
+</main>
+<footer class="footer"><span>ROMAIN BARBIÈRE</span><span>BTS SIO · SISR</span><span>NETWORK / SYSTEMS / CYBER</span><span>RB / 2026</span></footer>
+</div>
+
+<div id="projects-overlay" class="projects-overlay" aria-hidden="true"><div class="overlay-background"></div><div class="projects-container"><div class="projects-header"><div><span class="section-eyebrow">U5 / SECURE DATABASE</span><h2>PROJECT <span class="gradient-text">DETAILS</span></h2></div><button class="close-button" id="close-projects">×</button></div><div id="project-modal-content" class="project-modal-content"></div></div></div>
+<div id="terminal-overlay" class="terminal-overlay" aria-hidden="true"><div class="terminal-window"><div class="terminal-head"><span>RB_TERMINAL // SESSION</span><button id="close-terminal">×</button></div><div class="terminal-body" id="terminal-body"><p><span class="console-green">system@rb:~$</span> whoami</p><p>romain.barbiere · BTS SIO SISR · architecture réseau</p><p><span class="console-green">system@rb:~$</span> status</p><p>ALTERNANCE ACTIVE — FNAC DARTY — ÉQUIPE ARCHITECTURE RÉSEAU</p><p><span class="console-green">system@rb:~$</span> help</p><p>experience · veille · projets · contact · clear</p><div class="terminal-command"><span class="console-green">system@rb:~$</span><input id="terminal-input" autocomplete="off" spellcheck="false" placeholder="essayez : projects"></div></div></div></div>
+<script src="portfolio8.js"></script>
 </body>
 </html>
