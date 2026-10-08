@@ -17,54 +17,35 @@
 <div class="scroll-progress" id="scroll-progress"></div>
 
 <div id="loading-screen" class="loading-screen active">
-  <div class="boot-noise"></div>
-  <div class="boot-scanlines"></div>
-  <div class="boot-vignette"></div>
-  <div class="boot-grid"></div>
-  <div class="boot-network" aria-hidden="true">
-    <span class="node n1"></span><span class="node n2"></span><span class="node n3"></span><span class="node n4"></span><span class="node n5"></span>
-    <i class="link l1"></i><i class="link l2"></i><i class="link l3"></i><i class="link l4"></i>
-  </div>
-  <div class="boot-shell cinematic-boot">
-    <div class="boot-top"><span>RB // PORTFOLIO OS <b>v10.0</b></span><span>SECURE SESSION · <em>ENCRYPTED</em></span></div>
-    <div class="boot-command"><span class="prompt">SYSTEM://</span><span id="boot-command-text">INITIALIZE PERSONAL NODE</span><span class="cursor-block"></span></div>
-    <div class="boot-core cinematic-core radar-searching">
-      <div class="dragon-radar scouter-mode">
-        <div class="scouter-arrows" aria-hidden="true">
-          <i class="arrow ar1">➤</i><i class="arrow ar2">➤</i><i class="arrow ar3">➤</i><i class="arrow ar4">➤</i>
-        </div>
-        <div class="radar-inner-ring"></div>
-        <div class="scanner-point"><span class="scanner-dot"></span><span class="scanner-pulse"></span></div>
-        <div class="scanner-target-ring"></div>
-        <div class="scanner-analysis"></div>
-        <div class="scanner-status">
-          <strong id="scouter-caption">RECHERCHE...</strong>
-          <span id="scouter-sub">CIBLE NON IDENTIFIÉE</span>
-        </div>
-        <div class="radar-hud hud-top">SCOUT // RECHERCHE DE SIGNAL</div>
-        <div class="radar-hud hud-bottom">ÉTAT : <b id="radar-state">RECHERCHE</b></div>
+  <div class="cinematic-intro" aria-hidden="true">
+    <div class="intro-stars"></div>
+    <div class="intro-noise"></div>
+    <div class="intro-hud hud-top"><span>RB://SYSTEM</span><span>SECURE BOOT</span><span>NODE 01</span></div>
+    <div class="intro-hud hud-side left"><span>NETWORK</span><span>SYSTEMS</span><span>SECURITY</span></div>
+    <div class="intro-hud hud-side right"><span>ARCHITECTURE</span><span>SISR</span><span>FNAC DARTY</span></div>
+    <div class="intro-center">
+      <div class="intro-rings ring-a"></div>
+      <div class="intro-rings ring-b"></div>
+      <div class="intro-rings ring-c"></div>
+      <div class="intro-crosshair"></div>
+      <div class="intro-core">
+        <span class="core-glow"></span>
+        <strong>RB</strong>
       </div>
-      <div class="boot-ring ring-a"></div><div class="boot-ring ring-b"></div><div class="boot-ring ring-c"></div>
-      <div class="boot-orbit orbit-a"></div><div class="boot-orbit orbit-b"></div><div class="boot-mark">RB</div>
-      <span class="core-crosshair h"></span><span class="core-crosshair v"></span>
-      <div class="found-message" id="found-message">
-        <span class="found-kicker">SIGNAL IDENTIFIÉ</span>
-        <strong>PORTFOLIO TROUVÉ</strong>
-        <small id="connect-message">CONNEXION...</small>
-      </div>
+      <div class="intro-pulse"></div>
     </div>
-    <div class="boot-terminal">
-      <div class="terminal-line"><span>[01]</span><strong>VERIFYING IDENTITY</strong><b data-state="ok">OK</b></div>
-      <div class="terminal-line"><span>[02]</span><strong>LOADING NETWORK PROFILE</strong><b data-state="wait">WAIT</b></div>
-      <div class="terminal-line"><span>[03]</span><strong>MOUNTING PROJECT ARCHIVE</strong><b data-state="wait">WAIT</b></div>
-      <div class="terminal-line"><span>[04]</span><strong>SYNCING TECHNOLOGY RADAR</strong><b data-state="wait">WAIT</b></div>
+    <div class="intro-title">
+      <span class="intro-code">IDENTITY // VERIFIED</span>
+      <h1>ROMAIN <em>BARBIÈRE</em></h1>
+      <p>NETWORK · SYSTEMS · CYBERSECURITY</p>
     </div>
-    <div class="boot-copy"><span>&gt; Connexion au profil personnel...</span><span>&gt; Analyse du parcours professionnel...</span><span>&gt; Déverrouillage de l’interface...</span></div>
-    <div class="loading-bar-container"><div class="loading-bar"><i class="bar-glow"></i></div></div>
-    <div class="boot-status-row"><span class="loading-status">AUTHENTICATION</span><strong class="loading-percentage">0%</strong></div>
-    <div class="boot-footer"><span>NETWORK / SYSTEMS / CYBER</span><span>PARIS // FR</span></div>
+    <div class="intro-data data-a"><small>PROFILE</small><b>LOADING</b></div>
+    <div class="intro-data data-b"><small>ACCESS</small><b>AUTHENTICATED</b></div>
+    <div class="intro-data data-c"><small>ARCH</small><b>ONLINE</b></div>
+    <div class="intro-progress-wrap"><div class="intro-progress-line"><i></i></div><div class="intro-progress-meta"><span class="loading-status">INITIALISATION DU PROFIL</span><strong class="loading-percentage">0%</strong></div></div>
+    <div class="intro-command">> mounting portfolio / <span>romain.barbiere</span>_</div>
+    <div class="intro-flash"></div>
   </div>
-  <div class="boot-reveal reveal-top"></div><div class="boot-reveal reveal-bottom"></div>
 </div>
 
 <div id="main-app" class="main-app">
@@ -72,7 +53,7 @@
   <div class="header-content">
     <a href="#top" class="brand"><span class="brand-mark">RB</span><span>ROMAIN BARBIÈRE</span></a>
     <nav class="quick-nav">
-      <a href="#profil">PROFIL</a><a href="#experience">PARCOURS</a><a href="#veille">VEILLE</a><a href="#projets">PROJETS</a><a href="#contact">CONTACT</a>
+      <a href="#profil">PROFIL</a><a href="#experience">PARCOURS</a><a href="#veille">VEILLE</a><a href="#synthese">SYNTHÈSE</a><a href="#projets">PROJETS</a><a href="#contact">CONTACT</a>
     </nav>
     <button class="status-pill" id="terminal-trigger"><span class="status-dot"></span><span>SYS ONLINE</span><b>⌘</b></button>
   </div>
@@ -87,7 +68,7 @@
     <p class="hero-subtitle">Étudiant en BTS SIO SISR et alternant chez <strong>Fnac Darty</strong> au sein de l’équipe Architecture Réseau.</p>
     <div class="hero-actions"><a href="#experience" class="cta-button primary">Explorer mon parcours <span>↘</span></a><button id="hero-terminal" class="cta-button secondary">Terminal <span>⌘</span></button></div>
     <div class="hero-stat-row">
-      <div><strong>2022</strong><span>PREMIER STAGE</span></div><div><strong>2023</strong><span>CYBERSÉCURITÉ</span></div><div><strong>2025</strong><span>BAC + FNAC DARTY</span></div><div><strong>09.25</strong><span>ALTERNANCE ACTIVE</span></div>
+      <div><strong>2022</strong><span>PREMIER STAGE</span></div><div><strong>2025</strong><span>PREMIÈRE EXPÉRIENCE FNAC DARTY</span></div><div><strong>09.25</strong><span>ALTERNANCE ACTIVE</span></div>
     </div>
   </div>
   <div class="hero-scene" aria-hidden="true">
@@ -110,21 +91,21 @@
     </article>
     <article class="glass-card metrics-card">
       <div class="card-top"><span class="card-code">TELEMETRY</span><span class="signal">● LIVE</span></div>
-      <div class="telemetry"><div><strong>05</strong><span>JALONS CLÉS</span></div><div><strong>06</strong><span>PROJETS SIO</span></div><div><strong>03</strong><span>AXES DE VEILLE</span></div><div><strong>01</strong><span>ALTERNANCE ACTIVE</span></div></div>
+      <div class="telemetry"><div><strong>04</strong><span>EXPÉRIENCES CLÉS</span></div><div><strong>06</strong><span>PROJETS SIO</span></div><div><strong>03</strong><span>AXES DE VEILLE</span></div><div><strong>01</strong><span>ALTERNANCE ACTIVE</span></div></div>
     </article>
     <article class="glass-card focus-card"><div class="focus-title"><span class="card-code">NETWORK RADAR</span><span>FOCUS</span></div><div class="radar"><i class="r1"></i><i class="r2"></i><i class="r3"></i><i class="sweep"></i><b class="blip one"></b><b class="blip two"></b><b class="blip three"></b><div class="radar-core">RB</div></div><p><strong>Architecture réseau</strong><span>Zone d’intérêt actuelle</span></p></article>
   </div>
 </section>
 
 <section class="section experience-section" id="experience">
-  <div class="section-heading"><div><span class="section-eyebrow">02 / PARCOURS</span><h2>MON <span class="gradient-text">ÉVOLUTION</span></h2></div><p>Une chronologie unique, du premier jalon en haut jusqu’à ma situation actuelle en bas.</p></div>
+  <div class="section-heading"><div><span class="section-eyebrow">02 / PARCOURS PROFESSIONNEL</span><h2>DU <span class="gradient-text">PREMIER STAGE</span> À L’ALTERNANCE</h2></div><p>Expériences et formation réunies dans une timeline unique, avec les étapes les plus récentes placées en premier.</p></div>
   <div class="timeline-wrap">
-    <div class="timeline-track" aria-hidden="true"><div class="timeline-track-line"></div><div class="timeline-track-glow"></div></div>
-    <article class="timeline-item education-item"><div class="timeline-index">01</div><div class="timeline-date"><strong>05.2022</strong><span>PREMIER JALON</span></div><div class="timeline-card glass-card"><div class="timeline-icon architecture">AR</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">MAI 2022 · IMMERSION</span><h3>Stage en architecture</h3></div><span class="timeline-kind">STAGE</span></div><p>Première découverte du monde professionnel et de l’architecture, point de départ de mon intérêt pour les environnements techniques.</p><div class="tags"><span>Architecture</span><span>Stage</span></div></div></div></article>
-    <article class="timeline-item education-item"><div class="timeline-index">02</div><div class="timeline-date"><strong>01.2023</strong><span>SPÉCIALISATION</span></div><div class="timeline-card glass-card"><div class="timeline-icon cyber">CY</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">JANVIER 2023 · DÉCOUVERTE</span><h3>Stage en cybersécurité</h3></div><span class="timeline-kind">STAGE</span></div><p>Découverte du domaine de la cybersécurité et première approche des enjeux de protection des systèmes et des données.</p><div class="tags"><span>Cybersécurité</span><span>Stage</span></div></div></div></article>
-    <article class="timeline-item education-item"><div class="timeline-index">03</div><div class="timeline-date"><strong>2025</strong><span>DIPLÔME</span></div><div class="timeline-card glass-card"><div class="timeline-icon bac">BA</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">2025 · LYCÉE HONORÉ DE BALZAC</span><h3>Baccalauréat général</h3></div><span class="timeline-kind">FORMATION</span></div><p>Baccalauréat général obtenu au lycée Honoré de Balzac, avant l’entrée en BTS SIO.</p><div class="tags"><span>Baccalauréat général</span><span>Honoré de Balzac</span></div></div></div></article>
-    <article class="timeline-item education-item"><div class="timeline-index">04</div><div class="timeline-date"><strong>07.2025</strong><span>ENTREPRISE</span></div><div class="timeline-card glass-card"><div class="timeline-icon fnac">F·D</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">JUILLET 2025 · FNAC DARTY</span><h3>Première expérience chez Fnac Darty</h3></div><span class="timeline-kind">EXPÉRIENCE</span></div><p>Première immersion professionnelle au sein du groupe, avant le début de mon alternance en septembre 2025.</p><div class="tags"><span>Fnac Darty</span><span>Entreprise</span><span>Juillet 2025</span></div></div></div></article>
-    <article class="timeline-item current"><div class="timeline-index">05</div><div class="timeline-date"><strong>09.2025</strong><span>AUJOURD’HUI</span></div><div class="timeline-card glass-card current-card"><div class="timeline-icon fnac">F·D</div><div class="timeline-content"><div class="timeline-head"><div><span class="micro-label">SEPTEMBRE 2025 → AUJOURD’HUI</span><h3>Alternance chez Fnac Darty</h3></div><span class="current-badge">EN COURS</span></div><p>Alternance au sein de l’équipe <strong>Architecture Réseau</strong>, en parallèle de mon BTS SIO SISR. Une expérience qui me confronte directement aux problématiques d’infrastructure et d’architecture réseau en entreprise.</p><div class="tags"><span>Architecture réseau</span><span>Infrastructure</span><span>Alternance</span><span>SISR</span></div></div></div></article>
+    <div class="timeline-axis"><span></span></div>
+    <article class="timeline-item"><div class="timeline-date"><strong>05.2022</strong><span>STAGE</span></div><div class="timeline-dot"></div><div class="glass-card timeline-card"><div class="timeline-icon architecture">AR</div><div><span class="micro-label">MAI 2022 · PREMIÈRE IMMERSION</span><h3>Stage en architecture</h3><p>Première découverte du monde professionnel et de l’architecture.</p><div class="tags"><span>Architecture</span><span>Stage</span></div></div></div></article>
+    <article class="timeline-item"><div class="timeline-date"><strong>01.2023</strong><span>STAGE</span></div><div class="timeline-dot"></div><div class="glass-card timeline-card"><div class="timeline-icon cyber">CY</div><div><span class="micro-label">JANVIER 2023 · DÉCOUVERTE</span><h3>Stage en cybersécurité</h3><p>Découverte du domaine de la cybersécurité et première approche des enjeux de protection des systèmes et des données.</p><div class="tags"><span>Cybersécurité</span><span>Stage</span></div></div></div></article>
+    <article class="timeline-item"><div class="timeline-date"><strong>06.2025</strong><span>FORMATION</span></div><div class="timeline-dot"></div><div class="glass-card timeline-card"><div class="timeline-icon edu">BAC</div><div><span class="micro-label">JUIN 2025 · LYCÉE HONORÉ DE BALZAC</span><h3>Baccalauréat général</h3><p>Obtention du baccalauréat général au lycée Honoré de Balzac, avant l’entrée en BTS SIO.</p><div class="tags"><span>Baccalauréat général</span><span>Honoré de Balzac</span></div></div></div></article>
+    <article class="timeline-item"><div class="timeline-date"><strong>07.2025</strong><span>EXPÉRIENCE</span></div><div class="timeline-dot"></div><div class="glass-card timeline-card"><div class="timeline-icon fnac">F·D</div><div><span class="micro-label">JUILLET 2025 · FNAC DARTY</span><h3>Expérience professionnelle</h3><p>Première expérience chez Fnac Darty avant le début de mon alternance en septembre 2025.</p><div class="tags"><span>Fnac Darty</span><span>Entreprise</span></div></div></div></article>
+    <article class="timeline-item current"><div class="timeline-date"><strong>09.2025</strong><span>→ AUJOURD’HUI</span></div><div class="timeline-dot"></div><div class="glass-card timeline-card current-card"><div class="timeline-icon fnac">F·D</div><div><div class="timeline-head"><div><span class="micro-label">SEPTEMBRE 2025 → AUJOURD’HUI</span><h3>Alternance chez Fnac Darty</h3></div><span class="current-badge">EN COURS</span></div><p>Alternance au sein de l’équipe <strong>Architecture Réseau</strong>, en parallèle de mon BTS SIO SISR.</p><div class="tags"><span>Architecture réseau</span><span>Infrastructure</span><span>Alternance</span><span>SISR</span></div></div></div></article>
   </div>
   <div class="education-strip glass-card"><div><span class="micro-label">FORMATION EN COURS</span><h3>BTS SIO — SISR</h3><p>Depuis septembre 2025 · systèmes, réseaux et cybersécurité</p></div><div class="education-tags"><span>Linux</span><span>Réseaux</span><span>Cyber</span><span>SISR</span></div></div>
 </section>
@@ -142,20 +123,34 @@
   </div>
 </section>
 
+<section class="section synthesis-section" id="synthese">
+  <div class="section-heading"><div><span class="section-eyebrow">04 / SYNTHÈSE</span><h2>TABLEAU DES <span class="gradient-text">RÉALISATIONS</span></h2></div><p>Une vue synthétique de mes réalisations professionnelles et de mes travaux, accessible dans mon tableau de suivi.</p></div>
+  <article class="glass-card synthesis-card">
+    <div class="synthesis-orb"><span></span><strong>RB</strong></div>
+    <div class="synthesis-copy"><span class="micro-label">DOCUMENT DE SYNTHÈSE · GOOGLE SHEETS</span><h3>Réalisations professionnelles</h3><p>Retrouvez l’ensemble de mes réalisations dans mon tableau de synthèse : contexte, compétences mobilisées et suivi des activités.</p><a class="cta-button primary" href="https://docs.google.com/spreadsheets/d/18vNejR5a1m3h22d2KtLeEo0Uzaa_g0el/edit?usp=drive_link&ouid=113695881678060958123&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">OUVRIR LE TABLEAU <span>↗</span></a></div>
+    <div class="synthesis-meta"><div><span>FORMAT</span><strong>GOOGLE SHEETS</strong></div><div><span>TYPE</span><strong>SYNTHÈSE</strong></div><div><span>ACCÈS</span><strong>EXTERNE</strong></div></div>
+  </article>
+</section>
+
 <section class="section projects-section" id="projets">
-  <div class="section-heading"><div><span class="section-eyebrow">04 / RÉALISATIONS</span><h2>PROJECT <span class="gradient-text">GRID</span></h2></div><button class="ghost-button" id="projects-trigger">CENTRE DE COMMANDE ↗</button></div>
-  <div class="project-grid">
-    <button class="project-card featured" data-project="0"><span class="project-index">01</span><span class="project-type">NETWORK</span><h3>HAProxy Load Balancer</h3><p>Répartition de charge et haute disponibilité.</p><span class="project-open">OUVRIR LE DOSSIER ↗</span></button>
-    <button class="project-card" data-project="1"><span class="project-index">02</span><span class="project-type">SERVICES</span><h3>DNS & Serveur Web</h3><p>Bind9, résolution de noms et Apache.</p><span class="project-open">EXAMINER ↗</span></button>
-    <button class="project-card" data-project="2"><span class="project-index">03</span><span class="project-type">LINUX</span><h3>Administration Linux</h3><p>Utilisateurs, permissions et sudo.</p><span class="project-open">EXAMINER ↗</span></button>
-    <button class="project-card" data-project="3"><span class="project-index">04</span><span class="project-type">INFRA</span><h3>Infrastructure Linux</h3><p>Serveurs, Bash et automatisation.</p><span class="project-open">EXAMINER ↗</span></button>
-    <button class="project-card" data-project="4"><span class="project-index">05</span><span class="project-type">ITSM</span><h3>Serveur GLPI</h3><p>Parc informatique et Helpdesk.</p><span class="project-open">EXAMINER ↗</span></button>
-    <button class="project-card" data-project="5"><span class="project-index">06</span><span class="project-type">IDENTITY</span><h3>Active Directory</h3><p>Annuaire centralisé et stratégies GPO.</p><span class="project-open">EXAMINER ↗</span></button>
+  <div class="section-heading"><div><span class="section-eyebrow">05 / RÉALISATIONS</span><h2>PROJECT <span class="gradient-text">ARCHIVE</span></h2></div><p>Les réalisations sont classées par U5, U6 et U7. Chaque projet possède désormais sa propre page web, avec le rapport consultable depuis cette page.</p></div>
+  <div class="unit-tabs glass-card" id="unit-tabs">
+    <button class="unit-tab active" data-unit="U5"><span>U5</span><small>PROJETS</small><b>02</b></button>
+    <button class="unit-tab" data-unit="U6"><span>U6</span><small>PROJETS</small><b>02</b></button>
+    <button class="unit-tab" data-unit="U7"><span>U7</span><small>PROJETS</small><b>02</b></button>
+  </div>
+  <div class="unit-caption" id="unit-caption"><span class="micro-label">UNITÉ ACTIVE</span><strong>U5</strong><p>Sélectionne un projet pour ouvrir sa fiche technique.</p></div>
+  <div class="project-command-grid">
+    <aside class="project-index-panel glass-card"><span class="micro-label">ARCHIVE INDEX</span><div class="command-count"><strong id="unit-count">02</strong><span>PROJETS<br>DANS CETTE UNITÉ</span></div><div class="project-selector" id="project-selector"></div><div class="command-tip">Chaque projet ouvre une page dédiée avec son explication et l’accès au rapport.</div></aside>
+    <article class="project-stage glass-card" id="project-stage">
+      <div class="stage-grid"></div><div class="stage-header"><span class="project-type" id="stage-type">NETWORK</span><span class="stage-status">WEB PAGE READY</span></div>
+      <div class="stage-main"><div class="stage-visual" id="stage-visual"><div class="stage-core">01</div><div class="stage-orbit"></div><div class="stage-orbit orbit-b"></div><span class="stage-node n1"></span><span class="stage-node n2"></span><span class="stage-node n3"></span></div><div class="stage-copy"><span class="micro-label" id="stage-code">U5 // PROJECT 01</span><h3 id="stage-title">HAProxy Load Balancer</h3><p id="stage-description">Mise en place d'un système de répartition de charge avec HAProxy.</p><div class="stage-tags" id="stage-tags"></div><div class="stage-meta"><div><span>UNITÉ</span><strong id="stage-meta-unit">U5</strong></div><div><span>STACK</span><strong id="stage-meta-stack">HAProxy · Apache</strong></div></div><div class="stage-actions"><a id="stage-web-link" class="cta-button primary" href="#" target="_blank" rel="noopener noreferrer">EXPLORER LE PROJET <span>↗</span></a><a id="stage-report-link" class="cta-button secondary" href="#" target="_blank" rel="noopener noreferrer">RAPPORT <span>↗</span></a></div></div></div>
+    </article>
   </div>
 </section>
 
 <section class="section contact-section" id="contact">
-  <div class="contact-layout glass-card"><div><span class="section-eyebrow">05 / CONTACT</span><h2>OUVRIR UN <span class="gradient-text">CANAL</span></h2><p>Pour un échange professionnel, un projet, une question sur mon parcours ou simplement pour découvrir mon travail.</p></div><a href="mailto:romain.barbiere77@gmail.com" class="contact-mail"><small>EMAIL</small><strong>romain.barbiere77@gmail.com</strong><span>↗</span></a></div>
+  <div class="contact-layout glass-card"><div><span class="section-eyebrow">06 / CONTACT</span><h2>OUVRIR UN <span class="gradient-text">CANAL</span></h2><p>Pour un échange professionnel, un projet, une question sur mon parcours ou simplement pour découvrir mon travail.</p></div><a href="mailto:romain.barbiere77@gmail.com" class="contact-mail"><small>EMAIL</small><strong>romain.barbiere77@gmail.com</strong><span>↗</span></a></div>
 </section>
 </main>
 <footer class="footer"><span>ROMAIN BARBIÈRE</span><span>BTS SIO · SISR</span><span>NETWORK / SYSTEMS / CYBER</span><span>RB / 2026</span></footer>
