@@ -1,10 +1,18 @@
 const projectData=[
-{slug:'haproxy',unit:'U5',title:'HAProxy Load Balancer',type:'NETWORK',description:"Mise en place d'un système de répartition de charge avec HAProxy pour distribuer automatiquement le trafic web entre plusieurs serveurs Apache, avec gestion de la haute disponibilité et de la bascule en cas de panne.",tags:['HAProxy','Apache','Load Balancing','Linux'],link:'https://drive.google.com/file/d/1orJqhTzWo4JJt-atZo68q7DtiWmaQ8fi/view?usp=drive_link'},
-{slug:'dns-web',unit:'U5',title:'DNS & Serveur Web',type:'SERVICES',description:"Configuration d'un serveur DNS pour la résolution de noms et mise en place d'un serveur web Apache, avec zones DNS, enregistrements A/CNAME et hôtes virtuels.",tags:['DNS','Bind9','Apache','Virtual Hosts'],link:'https://drive.google.com/file/d/1g-LJXD5bluByPVxsv0EKLNxTXw20EdfM/view?usp=drive_link'},
-{slug:'linux-admin',unit:'U6',title:'Administration Linux',type:'LINUX',description:"Gestion des utilisateurs et groupes, permissions avancées, sécurisation de fichiers critiques et administration sudo avec journalisation des actions.",tags:['Linux Admin','Permissions','Sudo','Security'],link:'https://drive.google.com/file/d/16iajoQaNlVseb4Ib5dBC0HL9Tjr4eSQa/view?usp=drive_link'},
-{slug:'infra-linux',unit:'U6',title:'Infrastructure Linux',type:'INFRA',description:"Déploiement et configuration d'une infrastructure Linux avec administration de serveurs, automatisation de tâches et scripts Bash.",tags:['Linux Server','Bash','Automation','Infrastructure'],link:'https://drive.google.com/file/d/1b6HA--aYYhMlNDoBfLRvXhCRyt4dofwh/view?usp=drive_link'},
-{slug:'glpi',unit:'U7',title:'Serveur GLPI',type:'ITSM',description:"Déploiement d'une solution de gestion de parc permettant de centraliser l'inventaire matériel et logiciel et d'organiser le support technique via une plateforme Helpdesk.",tags:['GLPI','ITSM','Asset Management','Helpdesk'],link:'https://docs.google.com/document/d/1jUZxO36raOoGqUDvRdQHIABXzx9jBAA2/edit?usp=drive_link&ouid=113695881678060958123&rtpof=true&sd=true'},
-{slug:'active-directory',unit:'U7',title:'Active Directory',type:'IDENTITY',description:"Mise en place d'un service d'annuaire centralisé permettant de structurer les comptes, les accès et les configurations du parc via des stratégies de groupe (GPO).",tags:['Windows Server','Active Directory','GPO','Identity'],link:'https://drive.google.com/file/d/1elvZpKq5xmvcdeelqnD0ypMBVhBlw6pe/view?usp=drive_link'}
+{slug:'haproxy',unit:'U5',title:'HAProxy Load Balancer',type:'NETWORK',description:"Mise en place d'un système de répartition de charge avec HAProxy pour distribuer automatiquement le trafic web entre plusieurs serveurs Apache, avec gestion de la haute disponibilité et de la bascule en cas de panne.",tags:['HAProxy','Apache','Load Balancing','Linux'],competencies:['c5','c4'],link:'https://drive.google.com/file/d/1orJqhTzWo4JJt-atZo68q7DtiWmaQ8fi/view?usp=drive_link'},
+{slug:'dns-web',unit:'U5',title:'DNS & Serveur Web',type:'SERVICES',description:"Configuration d'un serveur DNS pour la résolution de noms et mise en place d'un serveur web Apache, avec zones DNS, enregistrements A/CNAME et hôtes virtuels.",tags:['DNS','Bind9','Apache','Virtual Hosts'],competencies:['c5','c1'],link:'https://drive.google.com/file/d/1g-LJXD5bluByPVxsv0EKLNxTXw20EdfM/view?usp=drive_link'},
+{slug:'linux-admin',unit:'U6',title:'Administration Linux',type:'LINUX',description:"Gestion des utilisateurs et groupes, permissions avancées, sécurisation de fichiers critiques et administration sudo avec journalisation des actions.",tags:['Linux Admin','Permissions','Sudo','Security'],competencies:['c2','c6'],link:'https://drive.google.com/file/d/16iajoQaNlVseb4Ib5dBC0HL9Tjr4eSQa/view?usp=drive_link'},
+{slug:'infra-linux',unit:'U6',title:'Infrastructure Linux',type:'INFRA',description:"Déploiement et configuration d'une infrastructure Linux avec administration de serveurs, automatisation de tâches et scripts Bash.",tags:['Linux Server','Bash','Automation','Infrastructure'],competencies:['c4','c6'],link:'https://drive.google.com/file/d/1b6HA--aYYhMlNDoBfLRvXhCRyt4dofwh/view?usp=drive_link'},
+{slug:'glpi',unit:'U7',title:'Serveur GLPI',type:'ITSM',description:"Déploiement d'une solution de gestion de parc permettant de centraliser l'inventaire matériel et logiciel et d'organiser le support technique via une plateforme Helpdesk.",tags:['GLPI','ITSM','Asset Management','Helpdesk'],competencies:['c1','c2'],link:'https://docs.google.com/document/d/1jUZxO36raOoGqUDvRdQHIABXzx9jBAA2/edit?usp=drive_link&ouid=113695881678060958123&rtpof=true&sd=true'},
+{slug:'active-directory',unit:'U7',title:'Active Directory',type:'IDENTITY',description:"Mise en place d'un service d'annuaire centralisé permettant de structurer les comptes, les accès et les configurations du parc via des stratégies de groupe (GPO).",tags:['Windows Server','Active Directory','GPO','Identity'],competencies:['c1','c5'],link:'https://drive.google.com/file/d/1elvZpKq5xmvcdeelqnD0ypMBVhBlw6pe/view?usp=drive_link'}
+];
+const competencies=[
+{id:'c1',num:'01',title:'Gérer le patrimoine informatique',desc:'Recenser, administrer et faire évoluer les ressources et services qui composent le système informatique.',projects:['dns-web','glpi','active-directory']},
+{id:'c2',num:'02',title:'Répondre aux incidents et aux demandes d’assistance',desc:'Diagnostiquer, traiter et suivre les incidents ou demandes liés aux services informatiques.',projects:['glpi','linux-admin']},
+{id:'c3',num:'03',title:'Développer la présence en ligne de l’organisation',desc:'Mettre en œuvre et maintenir les services qui participent à la disponibilité et à la visibilité des services numériques.',projects:['dns-web']},
+{id:'c4',num:'04',title:'Travailler en mode projet',desc:'Organiser une réalisation technique, choisir une solution et documenter les étapes de mise en œuvre.',projects:['haproxy','infra-linux']},
+{id:'c5',num:'05',title:'Mettre à disposition des utilisateurs un service informatique',desc:'Déployer, configurer et rendre opérationnels des services adaptés aux besoins des utilisateurs.',projects:['haproxy','active-directory']},
+{id:'c6',num:'06',title:'Organiser son développement professionnel',desc:'Assurer une veille, développer ses compétences et valoriser les expériences acquises en formation et en entreprise.',projects:['linux-admin','infra-linux']}
 ];
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
@@ -20,7 +28,7 @@ class Portfolio{
   this.input=$('#terminal-input');
   this.init();
  }
- init(){this.boot();this.nav();this.projectsUI();this.terminalUI();this.scrollReveal();this.progress();this.parallax();}
+ init(){this.boot();this.nav();this.renderCompetencies();this.projectsUI();this.terminalUI();this.scrollReveal();this.progress();this.parallax();}
  boot(){
   const screen=this.loading,percent=this.percent,status=this.status,main=this.main,bar=document.querySelector('.intro-progress-line i');
   const start=performance.now(),duration=2350; let done=false;
@@ -31,9 +39,18 @@ class Portfolio{
  }
  nav(){
   const links=$$('.quick-nav a');
-  const ids=['profil','experience','alternance','veille','projets','contact'];
+  const ids=['profil','experience','bts-sio','alternance','veille','projets','certifications','contact'];
   const update=()=>{let current='';const y=scrollY+innerHeight*.3;ids.forEach(id=>{const s=document.getElementById(id);if(s&&s.offsetTop<=y)current=id;});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));};
   addEventListener('scroll',update,{passive:true});update();
+ }
+ renderCompetencies(){
+  const grid=$('#competency-grid'); if(!grid)return;
+  const bySlug=Object.fromEntries(projectData.map(p=>[p.slug,p]));
+  grid.innerHTML=competencies.map(c=>{
+    const cards=c.projects.map(slug=>{const p=bySlug[slug]; if(!p)return ''; return `<button class="competency-project" data-project="${p.slug}"><span>${p.unit}</span><strong>${p.title}</strong><small>${p.type} · ouvrir la fiche ↗</small></button>`;}).join('');
+    return `<article class="glass-card competency-card"><div class="competency-number">${c.num}</div><div class="competency-body"><span class="micro-label">COMPÉTENCE ${c.num}</span><h4>${c.title}</h4><p>${c.desc}</p><div class="competency-projects">${cards}</div></div></article>`;
+  }).join('');
+  $$('.competency-project',grid).forEach(btn=>btn.addEventListener('click',()=>{this.activeUnit=projectData.find(p=>p.slug===btn.dataset.project)?.unit||'U5';this.renderUnit(this.activeUnit);this.showProject(btn.dataset.project,true);}));
  }
  projectsUI(){
   const selector=$('#project-selector');
@@ -89,8 +106,9 @@ class Portfolio{
    else if(value==='experience'){out.textContent='→ parcours: 09.2025 / 07.2025 / 06.2025 / 01.2023 / 05.2022.';document.getElementById('experience')?.scrollIntoView({behavior:'smooth'});close();}
    else if(value==='veille'){out.textContent='→ radar actif: SASE / Zero Trust · IA réseau · post-quantique.';document.getElementById('veille')?.scrollIntoView({behavior:'smooth'});close();}
    else if(value==='contact'){out.textContent='→ romain.barbiere77@gmail.com';}
-   else if(value==='synthese'){out.textContent='→ ouverture du tableau de synthèse des réalisations.';document.getElementById('synthese')?.scrollIntoView({behavior:'smooth'});close();}
-   else out.textContent='Commande inconnue. Essayez: projects, experience, veille, synthese, contact, clear.';
+   else if(value==='bts'){out.textContent='→ ouverture de la rubrique BTS SIO SISR.';document.getElementById('bts-sio')?.scrollIntoView({behavior:'smooth'});close();}
+   else if(value==='certifications'){out.textContent='→ ouverture des certifications.';document.getElementById('certifications')?.scrollIntoView({behavior:'smooth'});close();}
+   else out.textContent='Commande inconnue. Essayez: projects, experience, bts, veille, certifications, contact, clear.';
    body.insertBefore(out,$('.terminal-command'));
   });
  }
