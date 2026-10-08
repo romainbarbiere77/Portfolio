@@ -31,7 +31,7 @@ class Portfolio{
  }
  nav(){
   const links=$$('.quick-nav a');
-  const ids=['profil','experience','veille','projets','contact'];
+  const ids=['profil','experience','alternance','veille','projets','contact'];
   const update=()=>{let current='';const y=scrollY+innerHeight*.3;ids.forEach(id=>{const s=document.getElementById(id);if(s&&s.offsetTop<=y)current=id;});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));};
   addEventListener('scroll',update,{passive:true});update();
  }
